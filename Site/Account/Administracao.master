@@ -1,0 +1,104 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Administracao.master.cs" Inherits="Account_Administracao"%>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Untitled Page</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="../Scripts/Funcoes.js"></script>
+    <link href="../Content/suporte.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../Images/Imagem1.png" />
+    <style type="text/css">
+        .modal
+        {
+            position: fixed;
+            z-index: 999;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            background-color: Black;
+            font-weight:bold;            
+            opacity: 0.6;
+        }
+        .center
+        {
+            z-index: 1000;
+            margin: 300px auto;
+            padding: 10px;
+            width: 130px;
+            background-color: red;
+            border-radius: 10px;
+            opacity: 1;
+        }
+        .navbar {
+            margin-bottom: 0;
+            background-color: Highlight;
+            z-index: 9999;
+            border: 0;
+            font-size: 12px !important;
+            line-height: 1.42857143 !important;
+            letter-spacing: 4px;
+            border-radius: 0;
+        }
+        #aguarde
+        {
+	        color: white;
+	        float: right;
+            font-weight: bold;
+        }
+        .data
+        {
+	        color: White;
+            font-weight: bold;
+	        float: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid" style="padding-top:3px;">
+        <form id="form1" runat="server">
+            <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true"></asp:ScriptManager>
+            <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                <ContentTemplate>
+                    <nav class="navbar" id="cabecalho" runat="server">
+		                <asp:Label ID="lblData" runat="server" CssClass="data label" />
+                        <asp:Label ID="lblUsuario" runat="server" CssClass="data label" />
+                    </nav>
+                    <nav class="navbar navbar-inverse" id="menu" runat="server">
+                        <div class="container-fluid">
+                            <div class="navbar-header">
+                                <img src="../Images/Imagem2.png" class="img-responsive" alt="Logo">
+                            </div>
+                            <ul class="nav navbar-nav">
+                                <li id="home" runat="server"><a href="Principal.aspx">Home</a></li>
+                                <li id="lojista" runat="server"><a href="Lojista.aspx">Lojista</a></li>
+                                <li id="produto" runat="server"><a href="Produto.aspx">Produto</a></li>
+                                <li id="promocao" runat="server"><a href="Promocao.aspx">Promoção</a></li>
+                                <li><a href="AlterarSenha.aspx">Alterar Senha</a></li>
+                                <li><a href="../Default.aspx?S=53696D">Sair</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">
+                    </asp:contentplaceholder>
+                </ContentTemplate>
+            </asp:UpdatePanel>
+            <asp:UpdateProgress ID="UpdateProgress1" AssociatedUpdatePanelID="UpdatePanel1" runat="server">
+                <ProgressTemplate>
+                    <div class="modal">
+                        <div class="center">
+                            <img alt="spinner" src="../Images/spinner.gif" /><font style="color:white; font-size:12px;" >Aguarde...</font> 
+                        </div>
+                    </div>
+                </ProgressTemplate> 
+            </asp:UpdateProgress>
+        </form>
+    </div>
+</body>
+</html>

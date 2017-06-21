@@ -1,0 +1,71 @@
+fieldset
+{
+	BORDER-RIGHT: rgb(76, 120, 151) 1px dashed;
+	BORDER-TOP: rgb(76, 120, 151) 1px dashed;
+	BORDER-LEFT: rgb(76, 120, 151) 1px dashed;
+	BORDER-BOTTOM: rgb(76, 120, 151) 1px dashed;
+	padding: 10px 10px 10px 10px;
+}
+
+legend
+{
+	padding: 10px 10px 10px 10px;
+	BACKGROUND: rgb(76, 120, 151);
+	COLOR: #ffffff;
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 13px;
+	LINE-HEIGHT: 0.8;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+}
+
+input, textarea
+{
+	BORDER-RIGHT: rgb(76, 120, 151) 1px solid;
+	BORDER-TOP: rgb(76, 120, 151) 1px solid;
+	BORDER-LEFT: rgb(76, 120, 151) 1px solid;
+	BORDER-BOTTOM: rgb(76, 120, 151) 1px solid;
+	FONT-FAMILY: Arial;
+	COLOR: #243d81;
+	BACKGROUND: #fffefe;
+}
+
+.rotulo
+{
+	padding-left: 3px;
+	padding-bottom: 2px;
+	color: #ffffff;
+	background-color: rgb(104, 147, 179);
+}
+
+select
+{
+	border-bottom: rgb(76, 120, 151) 1px solid;
+	border-left: rgb(76, 120, 151) 1px solid;
+	border-top: rgb(76, 120, 151) 1px solid;
+	border-right: rgb(76, 120, 151) 1px solid;
+	BACKGROUND: #fffefe;
+	COLOR: rgb(76, 120, 151);
+	FONT-FAMILY: Arial;
+}
+
+.qsf-demo-canvas-overview {
+    min-height: 205px;
+    margin-top: 0;
+    padding: 40px 15px 5px;
+    color: #728ea3;
+    font: 13px "Segoe UI", Arial, Helvetica, sans-serif;
+    background: url(../images/rcu-demo-ovreview-background-light.png) no-repeat;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Dark skins */
+.background-black .qsf-demo-canvas,
+.background-blackmetrotouch .qsf-demo-canvas,
+.background-glow .qsf-demo-canvas {
+    background-image: url(../images/rcu-demo-ovreview-background-dark.png);
+}
+
+.rcuToolTip {
+    z-index: 2;
+}
