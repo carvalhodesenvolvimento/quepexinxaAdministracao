@@ -203,8 +203,8 @@ public partial class Account_Promocao : System.Web.UI.Page
         {
             case TipoEstado.Novo:
                 this.PromocaoID = 0;
-                //this.ddlProduto.ClearSelection();
-
+                this.ddlProduto.ClearSelection();
+                /*
                 foreach (Control item in this.Controls)
                 {
                     //Se o contorle for um DropDownList...
@@ -221,10 +221,11 @@ public partial class Account_Promocao : System.Web.UI.Page
                         }
                     }
                 }
-                //this.txtDataInicio.Text = string.Empty;
-                //this.txtDataFim.Text = string.Empty;
-                //this.txtValorAntigo.Text = string.Empty;
-                //this.txtValorAtual.Text = string.Empty;
+                */
+                this.txtDataInicio.Text = string.Empty;
+                this.txtDataFim.Text = string.Empty;
+                this.txtValorAntigo.Text = string.Empty;
+                this.txtValorAtual.Text = string.Empty;
                 break;
         }
     }
