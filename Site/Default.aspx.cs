@@ -10,8 +10,8 @@ public partial class Default : System.Web.UI.Page
     {
         try
         {
-            //this.Page.Form.DefaultFocus = this.txtNome.ClientID;
-            //this.Page.Form.DefaultButton = this.btnOK.UniqueID;
+            this.Page.Form.DefaultFocus = this.txtNome.ClientID;
+            this.Page.Form.DefaultButton = this.btnOK.UniqueID;
             this.lblData.Text = DateTime.Today.ToLongDateString();
 
             if (!IsPostBack)
@@ -84,10 +84,9 @@ public partial class Default : System.Web.UI.Page
             usuarioSessao = null;
         }
     }
-/*
+
     private void EventosBotao()
     {
         this.btnOK.Attributes.Add("onClick", "return Validar('" + this.txtNome.ClientID + "','" + this.txtSenha.ClientID + "');");
     }
-    */
 }
