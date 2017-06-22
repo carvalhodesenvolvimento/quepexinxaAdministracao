@@ -84,9 +84,10 @@ public partial class Default : System.Web.UI.Page
             usuarioSessao = null;
         }
     }
-
+/*
     private void EventosBotao()
     {
         this.btnOK.Attributes.Add("onClick", "return Validar('" + this.txtNome.ClientID + "','" + this.txtSenha.ClientID + "');");
     }
+    */
 }
